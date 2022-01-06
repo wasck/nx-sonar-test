@@ -1,11 +1,31 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
+  "plugins": ["@nrwl/nx", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "google"
+  ],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "require-jsdoc": "off",
+        "valid-jsdoc": "off",
+        "new-cap": "off",
+        "no-invalid-this": "off",
+        "prettier/prettier": "error",
+        "eol-last": ["warn", "never"],
+        "linebreak-style": ["warn", "windows"],
+        "function-paren-newline": ["error", { "minItems": 1 }],
+        "@typescript-eslint/no-empty-function": [
+          "error",
+          {
+            "allow": ["constructors"]
+          }
+        ],
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
           {

@@ -5,9 +5,10 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "start:ng-sonar-test-ui": "nx serve ng-sonar-test",
+    "build:ng-sonar-test-ui": "nx build ng-sonar-test",
+    "lint:ng-sonar-test-ui": "nx lint ng-sonar-test",
+    "test:ng-sonar-test-ui": "nx test ng-sonar-test"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "@nrwl/angular": "13.4.3",
+    "eslint-plugin-prettier": "^4.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
@@ -44,7 +46,8 @@
     "@typescript-eslint/eslint-plugin": "~5.3.0",
     "@typescript-eslint/parser": "~5.3.0",
     "cypress": "^9.1.0",
-    "eslint": "8.2.0",
+    "eslint": "^8.2.0",
+    "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "27.2.3",

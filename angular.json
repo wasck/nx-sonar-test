@@ -64,7 +64,8 @@
               "browserTarget": "ng-sonar-test:build:production"
             },
             "development": {
-              "browserTarget": "ng-sonar-test:build:development"
+              "browserTarget": "ng-sonar-test:build:development",
+              "port": 4100
             }
           },
           "defaultConfiguration": "development"
@@ -79,8 +80,7 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/ng-sonar-test/src/**/*.ts",
-              "apps/ng-sonar-test/src/**/*.html"
+              "apps/ng-sonar-test/src/**/*.ts"
             ]
           }
         },
